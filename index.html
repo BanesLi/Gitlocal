@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学习flex 布局</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .top{
+            height: 80px;
+            border-bottom: 1px solid #dedede;
+        }
+        nav ul{
+            width: 100%;
+            height: 50px;
+            display: flex;
+        }
+        ul li{
+            list-style: none;
+            flex: 1;
+            text-align: center;
+            line-height: 50px;
+        }
+        section{
+            display: flex;
+            width: 1200px;
+            height: 200px;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: row-reverse;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: #4fc08d;
+        }
+        .site {
+            display: flex;
+            min-height: 100vh;    /*高度100%*/
+            flex-direction: column;
+        }
+
+        .Site-content {
+            flex: 1;
+        }
+        footer{
+            height: 100px;
+            background-color: #4fc08d;
+        }
+    </style>
+</head>
+<body class="site">
+<header>
+    <div class="top"></div>
+    <nav>
+        <ul>
+            <li><a href="javascript:">指南</a></li>
+            <li><a href="javascript:">组件</a></li>
+            <li><a href="javascript:">资源</a></li>
+            <li><a href="javascript:">指南</a></li>
+            <li><a href="javascript:">指南</a></li>
+            <li><a href="javascript:">组件</a></li>
+            <li><a href="javascript:">组件</a></li>
+            <li><a href="javascript:">资源</a></li>
+            <li><a href="javascript:">资源</a></li>
+            <li><a href="javascript:">资源</a></li>
+            <li><a href="javascript:">资源</a></li>
+            <li><a href="javascript:">资源</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </section>
+</header>
+<main class="Site-content">...</main>
+<footer>woshi dibu</footer>
+<script>
+    let foot = document.getElementsByTagName('footer');
+    let arrTxt = document.createElement('h4');
+    let nums = [];
+    for (let i =0; i<10; i++) {
+        nums[i]=i+1;
+    }
+    let arr =nums;
+    // arr.unshift(10);
+    // arr.splice(1,2,[2,1,3,5]);   //数组任意位置添加新的数组元素/  删除任意位置的元素
+    // arr.reverse();               //数组排序   正序 sort() 倒序 reverse()
+    arrTxt.innerHTML =arr;
+    foot[0].appendChild(arrTxt);
+    function square(num) {
+        return num *num;
+    }
+    console.log( arr.forEach(square));
+</script>
+</body>
+</html>
