@@ -19,8 +19,8 @@ var whh = {
 
 console.log(whh.fullName())
 
-//3.构造函数
-function Fullname(name){
+//3.构造函数  
+function Fullname(name){   
     console.log('构造函数===>'+ this)
     console.log('Hi,'+ name + '我是'+this.name)
 }
